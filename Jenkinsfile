@@ -9,7 +9,7 @@ node('master') {
         def projects = readJSON file: "${env.WORKSPACE}/input.json"
 
         echo "current workspace is ${env.WORKSPACE}"
-        echo "Project name is ${projects.projects.project[0].name}"
+        echo "Project name is ${projects.projects.project[1].name}"
     }
     
     stage('RUN Python Script') {
